@@ -1,4 +1,5 @@
 package stack;
 
-public class Stack {
+public class Stack<T> {
+
 }
