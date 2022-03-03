@@ -14,7 +14,7 @@ package stack;
  */
 
 public class Stack {
-    private Element top;
+    private Block top;
 
     public void pop () {
         if (!isEmpty() && top.getPrev() != null) {
@@ -27,10 +27,10 @@ public class Stack {
 
     public void push (Object data) {
         if (isEmpty()) {
-            top = new Element(data, null);
+            top = new Block(data, null);
         }
         else {
-            top = new Element(data, top);
+            top = new Block(data, top);
         }
     }
 
@@ -40,24 +40,5 @@ public class Stack {
 
     public boolean isEmpty () {
         return (top == null) ? true : false;
-    }
-
-    static class Element {
-
-        private Object data;
-        private Element prev;
-
-        public Element (Object data, Element prev) {
-            this.data = data;
-            this.prev = prev;
-        }
-
-        public Element getPrev () {
-            return prev;
-        }
-
-        public Object getData () {
-            return data;
-        }
     }
 }
