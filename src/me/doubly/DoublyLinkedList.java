@@ -32,7 +32,10 @@ public class DoublyLinkedList<T> {
         indexOutCheck(index);
 
         if (index == 0) {
-            getObject(index)
+            Node temp = head;
+            head = head.getNext();
+            temp.setNext(null);
+            return;
         }
 
         getObject(index-1).setNext(getObject(index+1));

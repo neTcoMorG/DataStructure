@@ -9,7 +9,8 @@ public class Test {
         dlinked.add(3);
         dlinked.add(4);
 
+        dlinked.remove(1);
+
         dlinked.print();
-        dlinked.remove(0);
     }
 }
